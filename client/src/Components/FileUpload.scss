@@ -1,0 +1,72 @@
+.file-card {
+  background-color: orange;
+  border: 3px dashed;
+  padding: 1em;
+  min-width: 400px;
+  min-height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .file-inputs {
+    position: relative;
+    margin-bottom: 1em;
+
+    input {
+      position: relative;
+      max-width: 200px;
+      height: 50px;
+      //we will display input before button
+      z-index: 2;
+      cursor: pointer;
+      //hide the input
+      opacity: 0;
+    }
+
+    button {
+      //we want that this button be positioned absolute to the parrent container and occupy all the space inside it
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      //we diplay button behind the input
+      z-index: 1;
+
+      //center the button inside file-inputs container
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: #ffff;
+      background-color: rgb(47, 238, 47);
+      font-size: 1.1rem;
+      cursor: pointer;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      transition: background-color 1s ease;
+      box-shadow: 0px 8px 24px rgb(12, 3, 3);
+
+      i {
+        width: 1.5em;
+        height: 1.5em;
+        padding: 0.4em;
+        background-color: orange;
+        color: white;
+        border-radius: 50%;
+        margin-right: 0.8em;
+        font-size: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &:hover {
+      button {
+        background-color: rgb(21, 160, 21);
+      }
+    }
+  }
+}
