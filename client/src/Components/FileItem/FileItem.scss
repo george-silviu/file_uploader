@@ -1,0 +1,36 @@
+.list-item {
+  display: flex;
+  align-items: center;
+
+  padding: 1em 1.2em;
+  margin: 1em 0;
+  border-radius: 5px;
+  background-color: orange;
+
+  //customizing all icons
+  svg {
+    color: rgb(57, 47, 255);
+
+    // customizing the file svg image
+    &:first-child {
+      font-size: 1.2em;
+      margin-right: 0.5em;
+    }
+  }
+
+  p {
+    //set filename to occuply all the space
+    flex: 1;
+    font-size: 0.9em;
+  }
+
+  .actions {
+    //make sure the actions div sstick at the right
+    justify-self: flex-end;
+    cursor: pointer;
+
+    .fa-spinner {
+      font-size: 1.2em;
+    }
+  }
+}

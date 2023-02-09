@@ -24,8 +24,6 @@ app.delete("/upload", (req, res) => {
   return res.status(200).json({ result: true, msg: "file deleted" });
 });
 
-// app.use("/users", require("./routes/api/usersRoutes"));
-
 app.listen(PORT, () => {
   console.log(`Express server is up at port ${3030}`);
 });
